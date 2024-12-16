@@ -1,13 +1,12 @@
 package com.authentication.keycloak;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.quarkus.runtime.Quarkus;
+import org.keycloak.platform.Platform;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootApplication
 public class KeycloakApplication {
 
 	public static void main(String[] args) {
@@ -21,9 +20,10 @@ public class KeycloakApplication {
 
 		devArgs.addAll(Arrays.asList(args));
 
-		//Quarkus.run(devArgs.toArray(new String[devArgs.size()]));
+		Quarkus.run(devArgs.toArray(new String[devArgs.size()]));
 
 		System.out.println("test");
 	}
+
 
 }
